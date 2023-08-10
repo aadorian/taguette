@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% set active_page = "index" %}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <!-- Include Flowbite Style-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+   
+
+
 {% block contents %}
 <div id="messages-div"></div>
 {% if show_messages %}
@@ -9,7 +15,9 @@
 {% if multiuser %}
 <h1>{% trans user_login=user.login %}Welcome {{ user_login }}{% endtrans %}</h1>
 {% else %}
-<h1>{% trans %}Welcome!{% endtrans %}</h1>
+<h1>{% trans %}Welcome User!{% endtrans %}</h1>
+<span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
+
 {% endif %}
 <p>{% trans %}Here are your projects:{% endtrans %}</p>
 <ul class="list-group">
