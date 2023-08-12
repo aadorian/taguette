@@ -25,35 +25,36 @@
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-              <th scope="col" class="px-6 py-3">
-                  Product name
+              <th scope="col" class="px-1 py-1">
+                Project 
               </th>
               <th scope="col" class="px-6 py-3">
-                  Color
+                Description
               </th>
               <th scope="col" class="px-6 py-3">
-                  Category
-              </th>
-              <th scope="col" class="px-6 py-3">
-                  Price
-              </th>
+                Link
+             </th>
           </tr>
       </thead>
       {% for project in projects %}
+      
       <tbody>
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            
+            <th scope="row" class="px-6 py-4 font-bold text-gray-900 whitespace-nowrap dark:text-white">
                 <a href="{{ reverse_url('project', project.id) }}">{{ project.name }}</a>
               </th>
               <td class="px-6 py-4">
-                  Silver
+                {{ project.description }}
               </td>
+
               <td class="px-6 py-4">
-                  Laptop
-              </td>
-              <td class="px-6 py-4">
-                  $2999
-              </td>
+                <a href="{{ reverse_url('project', project.id) }}">
+                  <button type="button" class="px-3 py-2 text-xs font-bold  text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Link
+                  </button>
+              </a>  
+             </td>
           </tr>
       </tbody>
       {% else %}
