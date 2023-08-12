@@ -6,7 +6,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
    
 
-
 {% block contents %}
 <div id="messages-div"></div>
 {% if show_messages %}
@@ -15,7 +14,7 @@
 {% if multiuser %}
 <h1>{% trans user_login=user.login %}Welcome {{ user_login }}{% endtrans %}</h1>
 {% else %}
-
+<!--main GUI-->
 
 <section class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
@@ -24,7 +23,6 @@
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Experience efficient and accurate tagging with our cutting-edge software, designed to enhance your qualitative data analysis process.</p>
          <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               <a href="{{ reverse_url('new_project') }}" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-            
                   {% trans "button in project list" %}Create project{% endtrans %}
 
                   <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -42,8 +40,8 @@
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                      <th scope="col" class="px-6 py-3">Project 
-                      </th>
+                    <th scope="col" class="px-6 py-3">Project 
+                    </th>
                       <th scope="col" class="px-6 py-3">Description
                       </th>
                       <th scope="col" class="px-6 py-3">Link
@@ -80,9 +78,6 @@
   </div>
 </section>
 
-
-<h1>{% trans %}Welcome User!{% endtrans %}</h1>
-<span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
 
 {% endif %}
 
