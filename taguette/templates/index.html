@@ -19,16 +19,60 @@
 <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
 
 {% endif %}
-<p>{% trans %}Here are your projects:{% endtrans %}</p>
+
+<p>{% trans %}Here are your projects list:{% endtrans %}</p>
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Product name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Color
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Category
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Price
+              </th>
+          </tr>
+      </thead>
+      {% for project in projects %}
+      <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <a href="{{ reverse_url('project', project.id) }}">{{ project.name }}</a>
+              </th>
+              <td class="px-6 py-4">
+                  Silver
+              </td>
+              <td class="px-6 py-4">
+                  Laptop
+              </td>
+              <td class="px-6 py-4">
+                  $2999
+              </td>
+          </tr>
+      </tbody>
+      {% else %}
+      {% trans %}You have no projects yet.{% endtrans %}
+      {% endfor %}
+  </table>
+</div>
+
+
+
 <ul class="list-group">
-{% for project in projects %}
-  <li class="list-group-item"><a href="{{ reverse_url('project', project.id) }}">{{ project.name }}</a></li>
-{% else %}
-  <li class="list-group-item disabled" style="font-style: oblique;">{% trans %}You have no projects yet.{% endtrans %}</li>
-{% endfor %}
+
+  <li class="list-group-item"></li>
+
   <li class="list-group-item list-group-item-primary" style="font-weight: bold;"><a href="{{ reverse_url('new_project') }}">{% trans "button in project list" %}Create a new project{% endtrans %}</a></li>
   {% if can_import_project -%}
   <li class="list-group-item list-group-item-primary" style="font-weight: bold;"><a href="{{ reverse_url('import_project') }}">{% trans "button in project list" %}Import a project file{% endtrans %}</a></li>
   {%- endif %}
 </ul>
 {% endblock %}
+
+
