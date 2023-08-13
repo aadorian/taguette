@@ -74,35 +74,38 @@
         
 
         <div class="tab-pane fade show active" id="documents" role="tabpanel" aria-labelledby="documents-tab">
-        
-             
-          
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-xs text-left text-gray-500 dark:text-gray-400">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
+                 <tr>
                         <th scope="col" class="px-6 py-3">
-                            Document name  
-                            <!-- upload image-->
-                            <a href="javascript:createDocument()" class="inline-flex items-center px-1 py-1 text-xm  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                              </svg>
-                              </a> 
+                            List of documents
+
+                         
                         </th>
+                        <p id="floating_helper_text" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Remember, contributions to this topic should follow our <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Community Guidelines</a>.</p>
                     </tr>
+                   
+                  </tr>
                 </thead>
                 <tbody>
                    <!--estas operaciones son llamadas desdde tagglete.js-->
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                     
+                        <tr >
                         <th scope="row" id="documents-list" class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-        
                         </th>   
                       <p class="list-group-item-primary"></p>
-                        
-                    </tr>           
+                     
+                    </tr>   
+                     <!-- upload image-->
+                    
                 </tbody>
+                
             </table>
+          
           </div>
           <input type="checkbox" id="backlight" class="mt-3" /> <label for="backlight">{% trans %}Backlight{% endtrans %}</label>
       
@@ -111,8 +114,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
             </svg>
   
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{% trans %}Upload{% endtrans %} </h5>
-  
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{% trans %}Upload{% endtrans %} 
+            <span><a href="javascript:createDocument()" class="inline-flex items-center px-1 py-1 text-xm  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+              </svg>
+              </a> </span>
+            </h5>
             <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Upload a new document to the collection.</p>
             <p class="text-sm font-extrabold text-gray-900 dark:text-white dark:text-white">{{project.name}} </p>
             <p class="text-sm text-gray-900 dark:text-white">{{project.description}} 
