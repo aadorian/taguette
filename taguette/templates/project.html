@@ -83,6 +83,7 @@
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             Document name  
+                            <!-- upload image-->
                             <a href="javascript:createDocument()" class="inline-flex items-center px-1 py-1 text-xm  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -92,10 +93,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                   <!--estas operaciones son llamadas desdde tagglete.js-->
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" id="documents-list" class="bg-white list-group-flush px-6 py-4 font-xs text-gray-900 whitespace-nowrap dark:text-white">
+                        <th scope="row" id="documents-list" class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        
                         </th>   
-                          <p class="list-group-item-primary"></p>
+                      <p class="list-group-item-primary"></p>
                         
                     </tr>           
                 </tbody>
@@ -316,8 +319,8 @@
         <input type="hidden" id="document-change-id" />
         <div class="container">
 
-<h1 class="mb-2ctext-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We invest in the <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">world’s potential</span></h1>
-<p class="text-xs font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+      <h1 class="mb-2ctext-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Document <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{document}</span></h1>
+        <p class="text-xs font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 
           <div class="row">
             <div class="col-md-6 form-group">
@@ -359,7 +362,7 @@
       <h5 class="modal-title">{% trans "modal window title" %}Highlight{% endtrans %}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>s
+        </button>
       </div>
       <div class="modal-body">
         <input type="hidden" id="highlight-add-id" />
