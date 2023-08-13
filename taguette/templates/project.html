@@ -410,24 +410,23 @@
                        required>
                      </div>
                   <div class="flex items-start">       
-                      <a href="#" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"></a>
-                
                     
+                      <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
+                
                     
                     </div>
-                  <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
-                  <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                      Delete the Document? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                  </div>
+                 
                 
-                  <button type="button" id="document-change-delete" class="btn btn-danger" data-dismiss="modal">{% trans %}Delete
-                    document{% endtrans %}</button> 
-                    <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500">
+                   <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500">
                       <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
                       </svg>
                        Last Event: {{last_event}}
                     </span>
+                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                      <span> Delete the Document? <a href="#" id="document-change-delete"  class="text-black-700 hover:underline dark:text-red-500"> <svg class="w-5 h-5 mr-1 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                    </a></span>
+                  </div>
               </form>
              
             <!-- bug if removed crashed-->
