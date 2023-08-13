@@ -569,9 +569,11 @@ function updateDocumentsList() {
       elem.classList.add('document-link-current');
     }
     elem.innerHTML =
-      '<div class="d-flex justify-content-between align-items-center">' +
-      '  <a class="document-link-a">' + escapeHtml(doc.name) + '</a>' +
-      '  <a href="javascript:editDocument(' + doc.id + ');" class="btn btn-primary btn-sm">' + gettext("Edit") + '</a>' +
+     
+     '<p class="text-xs font-bold text-gray-900 dark:text-white">'+ doc.description +'</p>'+
+     '  <a class="document-link-a">' + escapeHtml(doc.name) + '</a>' +
+    ' </button>'+
+      '  <a href="javascript:editDocument(' + doc.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit") + '</a>' +
       '</div>';
     documents_list.insertBefore(elem, before);
     var links = elem.getElementsByTagName('a');
@@ -875,7 +877,7 @@ function updateTagsList() {
       '  </div>' +
       '  <div style="white-space: nowrap;">' +
       '    <span class="badge badge-secondary badge-pill" id="tag-' + tag.id + '-count">' + tag.count + '</span>' +
-      '    <a href="javascript:editTag(' + tag.id + ');" class="btn btn-primary btn-sm">' + gettext("Edit") + '</a>' +
+      '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
       '  </div>' +
       '</div>';
     tags_list.insertBefore(elem, before);
