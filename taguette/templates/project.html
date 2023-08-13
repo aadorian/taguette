@@ -410,8 +410,11 @@
                        required>
                      </div>
                   <div class="flex items-start">       
-                      <a href="#" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                  </div>
+                      <a href="#" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"></a>
+                
+                    
+                    
+                    </div>
                   <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
                   <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
                       Delete the Document? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
@@ -419,13 +422,17 @@
                 
                   <button type="button" id="document-change-delete" class="btn btn-danger" data-dismiss="modal">{% trans %}Delete
                     document{% endtrans %}</button> 
+                    <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500">
+                      <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
+                      </svg>
+                       Last Event: {{last_event}}
+                    </span>
               </form>
-          
-      
+             
+            <!-- bug if removed crashed-->
             <div class="row">
               <div class="col-12 form-group">
-          
-            
               <label class="relative inline-flex items-center cursor-pointer">
                 <input name="document-change-direction" type="checkbox" value="RIGHT_TO_LEFT" class="sr-only peer">
               </label>
